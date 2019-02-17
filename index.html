@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Our World: Past, Present, Future</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="css/d3-tip.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default top">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.gapminder.org/" target="_blank"><img id="logo" src="img/logo.png"></a>
+            <span class="header">
+                <b>Our World:</b> <b class="red">Past</b>, <b>Present</b>, <b><i class="green">Future</i></b>
+            </span>
+            <span class="my-info">
+                <b class="green">by Dan Tran-Ngo</b> | <b>danngo23 at gmail (dot) com</b> | <a href="https://www.linkedin.com/in/dan-tran-ngo/" target="_blank"><small>My LinkedIn</small></a>
+            </span>
+        </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h4><strong>More Information</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This application I created exhibits an <b>animated bubble chart</b> that shows <b>how total population, GDP per capita, and
+                        life expectancy have changed</b> in different countries over the past two centuries and how they will change in the next two decades.
+                    </p>
+                    
+                    <p>
+                        For each year, you can <b>hover your mouse pointer over any bubble to reveal the name of the country</b> and its data during that particular time.
+                        To <b>select a specific year</b>, click and/or <b>drag the timeline slider</b>.
+                        To only <b>see countries from a specific continent, select from the dropdown</b> list above.
+                    </p>
+                    
+                    <p>
+                        The data was downloaded from <b><i><a href="https://www.gapminder.org/data/" target="_blank">gapminder.org/data/</a></i></b>.
+                        The population data and GDP per capita data included projected year values in the future but the life expectancy data did not, so
+                        I used linear regression to predict life expectancy for the years <i>2020-40</i> for each country.
+                    </p>
+                    
+                    <p>
+                        The size of the <b>total population</b> for each country is denoted in the <b>area of its bubble</b>.
+                        The <b>center of each bubble is the exact life expectancy and GDP/capita value</b>.
+                        The variable <b>life expectacy</b> is defined by the average number of years a newborn child would live if current mortality patterns were to stay the same.
+                        The variable <b>GDP per capita</b> is defined by gross domestic product per person adjusted for differences in purchasing power
+                        (in international dollars, fixed 2011 prices, purchasing power parity (PPP) rates based on 2011 International Comparison Program (ICP) benchmark estimates.)
+                    </p>
+                    
+                    <p>
+                        North America and South America are combined into a single category. Australia and Oceania are added to the Asian countries.
+                        This visualization contains information on 184 of the 195 countries. There are 11 countries not displayed because of a lack of sufficient data.
+                        Those countries not displayed are -
+                    </p>
+                    
+                    <ul>
+                        <li>Andorra (Europe)</li>
+                        <li>Liechtenstein (Europe)</li>
+                        <li>Monaco (Europe)</li>
+                        <li>San Marino (Europe)</li>
+                        <li>Vatican City (Europe)</li>
+                        <li>Dominica (West Indies, North America)</li>
+                        <li>St. Kitts & Nevis (West Indies, North America)</li>
+                        <li>Marshall Islands(Micronesia, Oceania)</li>
+                        <li>Nauru(Micronesia, Oceania)</li>
+                        <li>Palau (Micronesia, Oceania)</li>
+                        <li>Tuvalu (Polynesia, Oceania)</li>
+                    </ul>
+                  
+                </div>
+              <!--
+              <div class="modal-footer">
+                <h3>Modal Footer</h3>
+              </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <button id="play-button" class="btn btn-primary">Play</button>
+                <button id="reset-button" class="btn btn-primary">Reset</button>
+                <div id="slider-div">
+                    <label class="white">Year: <span id="year">1800</span></label>
+                    <div id="date-slider"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <button id="info-button" class="btn btn-primary">More Info</button>
+            </div>
+            <div class="col-md-6">
+                <select id="continent-select" class="form-control">
+                    <option selected value="all">All</option>
+                    <option value="europe">Europe</option>
+                    <option value="asia">Asia</option>
+                    <option value="americas">Americas</option>
+                    <option value="africa">Africa</option>
+                </select>
+            </div>
+            
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="chart-area"></div>                 
+            </div> 
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/d3-tip.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
