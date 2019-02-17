@@ -114,3 +114,7 @@ body {
 .red {
 	color: red;
 }
+
+.hidden {
+	visibility: hidden;
+}
