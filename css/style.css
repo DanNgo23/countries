@@ -1,0 +1,116 @@
+#chart-area svg {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#logo {
+	height:50px;
+}
+
+body {
+	/*background-color: #bce7f4;*/
+	background-color: black;
+}
+
+.graph-svg-component {
+    /*background-color: #bce7f4;*/
+	background-color: black;
+}
+
+.navbar-brand {
+	height: 60px;
+	padding: 5px 0px;
+}
+
+#reset-button, #play-button, #slider-div {
+	float: left;
+	margin-right:  10px;
+}
+
+#slider-div {
+	width: 300px;
+	margin-left: 10px;
+	/*margin-right: 20px; */
+}
+
+#reset-button, #play-button {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+#continent-select {
+	width: 150px;
+	/*float: none;
+	margin-left: 250px;*/
+	/*float: right;
+	margin-right: 100px;*/
+	float: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	font-weight: 600;
+}
+
+#info-button {
+	/*margin-top: -34px;
+	margin-top: -100px;*/
+	/*margin-bottom: 100px; */
+	/*margin-left: 200px;*/
+	/*margin-right: 2px;*/
+	margin-top: 5px;
+	margin-right: 5px;
+	float: right;
+	font-weight: 600;
+}
+
+.white {
+	color: white;
+	font-size: medium;
+}
+
+.btn {
+	background-color: white;
+	color: black;
+}
+
+.x-axis {
+	font-size: large;
+}
+
+.y-axis {
+	font-size: medium;
+}
+
+.my-info {
+    float: right;
+    margin-top: 2rem;
+	font-family: "Lucida Console";
+	font-weight: 600;
+	
+}
+
+.top {
+    /*color: #a53d3d;*/
+	background-color: #fff;
+	/*border-color: #022887;*/
+}
+
+.header {
+	float: left;
+	margin-top: 0.8rem;
+	font-size: xx-large;
+	/*color: #61c45e;*/
+	color: #000;
+	padding-left: 5%;
+	font-family: "Georgia", serif;
+}
+
+.green {
+	color: #61c45e;
+	
+}
+
+.red {
+	color: red;
+}
